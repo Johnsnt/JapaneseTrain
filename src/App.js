@@ -1,23 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
 
+import React, { useState } from 'react';
+import {royaltrain, nex, musky} from './assets/specialExpress/index';
+import { series733, enoden } from './assets/commuterRail';
+
+
 function App() {
+  // Estado para armazernar o tipo de trem
+    const [trainType, setTrainType] = useState('');
+ 
+  // Define a função para atualizar o tipo de trem ao pressionar o botão
+  const handleExpressFilter = () => {
+    setTrainType('express')
+  }
+
+  const handleCommuterFilter = () => {
+    setTrainType('commuter')
+  }
+
+  //Mapeia o tipo de trem para sua respectiva lista de imagens
+  const imagesByType = {
+    express: [royaltrain, nex, musky],
+    commuter: [series733, enoden]
+  };
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={handleExpressFilter}>Filtrar por Trem Expresso</button>
+      <button onClick={handleCommuterFilter}>Filtrar por Trem Commuter</button>
+      <div className="gallery">
+        {/* Renderiza as imagens correspondentes ao tipo de trem selecionado */}
+        {trainType && imagesByType[trainType].map((imagem, index) => (
+            <img
+              key={index}
+              src={imagem}
+              alt={`Imagem ${index + 1} do tipo de trem ${trainType}`}
+            />
+          ))}
+      </div>
+      
     </div>
   );
 }
