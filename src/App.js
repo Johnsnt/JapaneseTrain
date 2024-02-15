@@ -1,44 +1,42 @@
-import './App.css';
+import "./App.css";
 
-import React, { useState } from 'react';
-import {royaltrain, nex, musky} from './assets/specialExpress/index';
-import { series733, enoden } from './assets/commuterRail';
+import React, { useState } from "react";
+import { trainsList } from "./data/index.js"
+import GalleryItem from "./components/Card/index.jsx"
 
 
 function App() {
+
   // Estado para armazernar o tipo de trem
-    const [trainType, setTrainType] = useState('');
+    const [trainType, setTrainType] = useState(trainsList);
+
+  //Filtra o tipo de trem
+  const filtrarTrem = (trainType) => {
+    return trainsList.filter((train) => train.trainType === trainType)
+  }
  
-  // Define a função para atualizar o tipo de trem ao pressionar o botão
-  const handleExpressFilter = () => {
-    setTrainType('express')
+  // atualiza o tipo de trem ao pressionar o botão
+  const handleTrainTypeFilter = (trainType) => {
+    setTrainType(filtrarTrem(trainType))
   }
 
-  const handleCommuterFilter = () => {
-    setTrainType('commuter')
-  }
-
-  //Mapeia o tipo de trem para sua respectiva lista de imagens
-  const imagesByType = {
-    express: [royaltrain, nex, musky],
-    commuter: [series733, enoden]
-  };
 
 
   return (
     <div className="App">
-      <button onClick={handleExpressFilter}>Filtrar por Trem Expresso</button>
-      <button onClick={handleCommuterFilter}>Filtrar por Trem Commuter</button>
+      <button onClick={() => handleTrainTypeFilter("express")}>Filtrar por Trem Expresso</button>
+      <button onClick={() => handleTrainTypeFilter("commuter")}>Filtrar por Trem Commuter</button>
+      <section className="secao-train-images">
       <div className="gallery">
-        {/* Renderiza as imagens correspondentes ao tipo de trem selecionado */}
-        {trainType && imagesByType[trainType].map((imagem, index) => (
-            <img
-              key={index}
-              src={imagem}
-              alt={`Imagem ${index + 1} do tipo de trem ${trainType}`}
-            />
-          ))}
+        {trainType.map((item) => (
+        <GalleryItem
+          key = {item.id}
+          name={item.name}
+          img={item.img} 
+        />
+        ))}
       </div>
+      </section>
       
     </div>
   );
