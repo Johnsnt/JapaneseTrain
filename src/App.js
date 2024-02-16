@@ -1,8 +1,8 @@
 import "./App.css";
 
 import React, { useState } from "react";
-import { trainsList } from "./data/index.js"
-import GalleryItem from "./components/Card/index.jsx"
+import { trainsList } from "./data/index.js";
+import GalleryItem from "./components/Card/index.jsx";
 
 
 function App() {
@@ -11,14 +11,14 @@ function App() {
     const [trainType, setTrainType] = useState(trainsList);
 
   //Filtra o tipo de trem
-  const filtrarTrem = (trainType) => {
+  const filterTrain = (trainType) => {
     return trainsList.filter((train) => train.trainType === trainType)
-  }
+  };
  
   // atualiza o tipo de trem ao pressionar o botão
   const handleTrainTypeFilter = (trainType) => {
-    setTrainType(filtrarTrem(trainType))
-  }
+    setTrainType(filterTrain(trainType))
+  };
 
 
 
@@ -34,7 +34,7 @@ function App() {
           name={item.name}
           img={item.img} 
         />
-        ))}
+        ))};
       </div>
       </section>
       

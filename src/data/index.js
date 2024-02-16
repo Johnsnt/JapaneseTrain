@@ -52,8 +52,6 @@ export const trainsList = [
   { id: 49, name: "JR Shikijima Express", type: "express", img: imagesByType.express[48] },
   { id: 50, name: "JR West Tourism Express", type: "express", img: imagesByType.express[49] },
   { id: 51, name: "Disney Resort Line", type: "express", img: imagesByType.express[50] },
-  
-  //Commuter Line
   { id: 52, name: "JR 733 series", type: "commuter", img: imagesByType.commuter[0] },
   { id: 53, name: "SAPPORO Railway", type: "commuter", img: imagesByType.commuter[1] },
   { id: 54, name: "SAPPORO METRO", type: "commuter", img: imagesByType.commuter[2] },
@@ -189,5 +187,5 @@ export const trainsList = [
   { id: 184, name: "Kagoshima Utram", type: "commuter", img: imagesByType.commuter[132] },
   { id: 185, name: "Nagasaki Tramway", type: "commuter", img: imagesByType.commuter[133] },
   { id: 186, name: "Okinawa Yuirail", type: "commuter", img: imagesByType.commuter[134] },
-]
+];
 

@@ -50,7 +50,7 @@ import {
     tobu500,
     jre353,
     disneyline
-} from '../assets/specialExpress/index.js'
+} from '../assets/specialExpress/index.js';
 
 import {
     series733, 
@@ -188,7 +188,7 @@ import {
     kagoshimautram,
     nagasakitramway,
     okinawayuirail
-} from '../assets/commuterRail/index.js'
+} from '../assets/commuterRail/index.js';
 
 const imagesByType = {
     express: [royaltrain,
@@ -385,7 +385,3 @@ const imagesByType = {
 
 
   export default imagesByType;
-
-
-
-  
