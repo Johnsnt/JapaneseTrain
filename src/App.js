@@ -12,7 +12,7 @@ function App() {
 
   //Filtra o tipo de trem
   const filterTrain = (trainType) => {
-    return trainsList.filter((train) => train.trainType === trainType)
+    return trainsList.filter((train) => train.type === trainType)
   };
  
   // atualiza o tipo de trem ao pressionar o botão
