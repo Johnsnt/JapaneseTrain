@@ -2,17 +2,5 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-
-.secao-train-images {
-    background-image: url('https://www.wallart.com/media/catalog/product/cache/871f459736130e239a3f5e6472128962/w/1/w11917-small.jpg');
-    background-attachment: fixed;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    scroll-behavior: smooth;
 }
