@@ -1,4 +1,4 @@
-function criadorArray (...p) {
-    const arrayNovo = Arra.from(p)
-    return arrayNovo
-  }
+function criadorArray(...p) {
+  const arrayNovo = Arra.from(p);
+  return arrayNovo;
+}

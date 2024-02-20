@@ -1,5 +1,5 @@
 header {
-    position:fixed;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -17,12 +17,13 @@ header {
     margin-right: 50px;
     gap: 10px;
 }
-.btn-container button{ 
+
+.btn-container button {
     background-color: rgba(250, 250, 250, 1);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.35rem;
     cursor: pointer;
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 15px;
     font-weight: 600;
     margin: 0;
