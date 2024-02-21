@@ -5,6 +5,7 @@
     height: auto;
     display: flex;
     flex-flow:wrap column;
+    background-color: cadetblue;
 }
 
 .container-image img {

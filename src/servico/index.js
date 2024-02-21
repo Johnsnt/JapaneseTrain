@@ -1,4 +1,3 @@
-
 import { trainsList } from "../data";
 
 //dados do array
@@ -11,8 +10,11 @@ const filterTrain = (trainType) => {
     return trainsList.filter((train) => train.type === trainType);
 };
 
-const filterTrain2 = (trainName) => {
-    return trainsList.filter((train) => train.name.includes('JR'));
+const searchTrain = (text) => {
+    return trainsList.filter(
+        (train) =>
+            train.name.toLowerCase().includes(text.toLowerCase())
+    );
 };
 
-export {returnTrains, filterTrain};
+export { returnTrains, filterTrain, searchTrain };
