@@ -7,6 +7,7 @@ export default function Header({ express, commuter, clean, typedText, handleText
 
     return (
         <header>
+            <div className='h-c'>
             <img src={eastJRLogo} alt="JR_Logo" id="logo" />
             <div className='search-container'>
                 <img src={lupa} alt="lupa" />
@@ -22,6 +23,8 @@ export default function Header({ express, commuter, clean, typedText, handleText
                 <button onClick={() => commuter("commuter")}>Commuter Rail</button>
                 <button onClick={clean}>Clean Filter</button>
             </nav>
+            </div>
+            
         </header>
     );
 };

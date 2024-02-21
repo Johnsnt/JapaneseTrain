@@ -10,6 +10,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/* Agrupador de itens do header */
+.h-c {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 50px;
 }
 
@@ -17,7 +24,6 @@ header {
     position: relative;
     display: flex;
     align-items: center;
-    background-color: antiquewhite;
 }
 
 .search-container img {
@@ -33,10 +39,14 @@ header {
     border-style: none;
 }
 
+.search-container input:focus {
+    outline: none;
+}
+
 .btn-container {
     display: flex;
     margin-right: 50px;
-    gap: 10px;
+    gap: 5px;
 }
 
 .btn-container button {
@@ -54,8 +64,44 @@ header {
     width: auto;
 }
 
+.btn-container button:hover {
+    background-color: rgb(228, 228, 228);
+}
+
 #logo {
     width: 60px;
     margin-left: 20px;
     filter: hue-rotate(58deg);
+}
+
+@media (max-width:375px) {
+
+    header {
+        height: 130px;
+    }
+
+    .h-c {
+        max-width: 350px;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .h-c>img {
+        display: none;
+    }
+
+    .search-container {
+        width: 378px;
+    }
+
+    .btn-container {
+        margin-top: 10px;
+        margin-right: 0;
+        width: 378px;
+    }
+
+    .btn-container button {
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        user-select: none;
+    }
 }

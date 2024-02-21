@@ -1,6 +1,6 @@
 import { trainsList } from "../data";
 
-//dados do array
+//dados da coleção de trens
 const returnTrains = () => {
     return trainsList;
 };
@@ -10,11 +10,16 @@ const filterTrain = (trainType) => {
     return trainsList.filter((train) => train.type === trainType);
 };
 
+//Busca o trem com base em seu nome ou tipo
 const searchTrain = (text) => {
-    return trainsList.filter(
-        (train) =>
-            train.name.toLowerCase().includes(text.toLowerCase())
-    );
+    if (text.length >= 2) {
+        return trainsList.filter(
+            (train) =>
+                train.name.toLowerCase().includes(text.toLowerCase())
+        );
+    } else {
+        return trainsList;
+    }
 };
 
 export { returnTrains, filterTrain, searchTrain };
