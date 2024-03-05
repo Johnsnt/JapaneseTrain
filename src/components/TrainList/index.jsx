@@ -5,7 +5,7 @@ import { arrow } from '../../assets/items/';
 export default function TrainList({ trainCollection }) {
     return (
         <>
-            <section className="train-image-section" id="top">
+            <section className="train-image-section">
                 <div className="gallery">
                     {trainCollection.map((item) => (
                         <GalleryItem
