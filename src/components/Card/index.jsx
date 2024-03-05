@@ -2,7 +2,7 @@ import "./Card.css";
 
 export default function GalleryItem({ name, img }) {
     return (
-        <div className="image-container">
+        <div id="cardAnimado" className="image-container" >
             <div className="title-container">
                 <h1>{name}</h1>
             </div>
