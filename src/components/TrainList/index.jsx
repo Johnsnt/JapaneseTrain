@@ -9,6 +9,7 @@ export default function TrainList({ trainCollection }) {
                 <div className="gallery">
                     {trainCollection.map((item) => (
                         <GalleryItem
+                        
                             key={item.id}
                             name={item.name}
                             img={item.img}

@@ -1,5 +1,5 @@
 import './Header.css';
-import { eastJRLogo, lupa } from '../../assets/items';
+import { eastJRLogo, lupa, expressIcon, commuterIcon } from '../../assets/items';
 
 export default function Header({ express, commuter, clean, typedText, handleTextFilter }) {
 
@@ -7,7 +7,7 @@ export default function Header({ express, commuter, clean, typedText, handleText
 
     return (
         <header>
-            <div className='h-c'>
+            <div className='header-container'>
                 <img src={eastJRLogo} alt="JR_Logo" id="logo" />
                 <div className='search-container'>
                     <img src={lupa} alt="lupa" />
@@ -19,9 +19,9 @@ export default function Header({ express, commuter, clean, typedText, handleText
                     />
                 </div>
                 <nav className='btn-container'>
-                    <button onClick={() => express("express")}>Special Express</button>
-                    <button onClick={() => commuter("commuter")}>Commuter Rail</button>
-                    <button onClick={clean}>Clean Filter</button>
+                    <button onClick={() => express("express")}>Express <img className='buttonImage' src={expressIcon} alt="SpEXP"/></button>
+                    <button onClick={() => commuter("commuter")}>Commuter<img className='buttonImage' src={commuterIcon} alt="Commu"/></button>
+                    <button onClick={clean}>ALL</button>
                 </nav>
             </div>
 
