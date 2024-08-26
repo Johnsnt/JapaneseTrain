@@ -1,5 +1,5 @@
 # Trens Japoneses
-Um pequeno projeto feito em React para estudo de filtros.
+Um pequeno projeto feito em React com o foco no estudo de filtros (desconsiderando o estilo).
 
 # Funcionalidades 
 Busca por trens: Filtra os trens com base no nome de busca
